@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="heroBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#0a4d92" stop-opacity="0.15" />
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a4d92" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <filter id="heroShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="20" flood-color="#0a4d92" flood-opacity="0.15" />
+    </filter>
+  </defs>
+
+  <!-- Ambient Backdrop Circles -->
+  <circle cx="300" cy="250" r="220" fill="url(#heroBgGrad)" />
+  <circle cx="420" cy="180" r="140" fill="#38bdf8" fill-opacity="0.08" />
+  <circle cx="180" cy="320" r="100" fill="#0a4d92" fill-opacity="0.06" />
+
+  <!-- Floating Pharmaceutical Capsule 3D -->
+  <g transform="translate(180, 110) rotate(-22)" filter="url(#heroShadow)">
+    <!-- Capsule Left Half (Silver) -->
+    <path d="M 0,50 A 50,50 0 0,1 100,50 L 100,120 L 0,120 Z" fill="#e2e8f0" stroke="#cbd5e1" stroke-width="2" />
+    <!-- Capsule Right Half (Blue) -->
+    <path d="M 0,120 L 100,120 L 100,190 A 50,50 0 0,1 0,190 Z" fill="url(#blueGlow)" stroke="#0284c7" stroke-width="2" />
+    <!-- Center Dividing Band -->
+    <rect x="-2" y="116" width="104" height="8" rx="4" fill="#0f172a" fill-opacity="0.3" />
+    <!-- Shiny Reflection Highlight -->
+    <path d="M 20,40 Q 30,110 30,190" stroke="#ffffff" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.6" />
+    <!-- DISESBA Text on Left Half -->
+    <text x="50" y="88" fill="#1e293b" font-size="14" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="900" letter-spacing="2" text-anchor="middle">DISESBA</text>
+    <!-- Caduceus Symbol on Right Half -->
+    <g transform="translate(50, 155) scale(0.7)">
+      <line x1="0" y1="-25" x2="0" y2="25" stroke="#ffffff" stroke-width="3" />
+      <circle cx="0" cy="-25" r="4" fill="#ffffff" />
+      <path d="M -15,-15 Q 0,-5 15,-15 Q 0,5 -15,15 Q 0,25 15,15" fill="none" stroke="#ffffff" stroke-width="2.5" />
+    </g>
+  </g>
+
+  <!-- Floating Feature Card 1: Garantía y Registro Sanitario -->
+  <g transform="translate(320, 80)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="220" height="75" rx="16" fill="#ffffff" fill-opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="36" cy="37.5" r="20" fill="#eff6ff" />
+    <!-- Shield Check Icon -->
+    <path d="M 36,25 L 46,29 C 46,38 41,45 36,49 C 31,45 26,38 26,29 Z" fill="#0284c7" />
+    <path d="M 32,37 L 35,40 L 41,33" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="70" y="32" fill="#0f172a" font-size="13" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700">Calidad Certificada</text>
+    <text x="70" y="48" fill="#64748b" font-size="11" font-family="'Plus Jakarta Sans', Inter, sans-serif">Estándares USP & BP</text>
+  </g>
+
+  <!-- Floating Feature Card 2: Distribución Nacional -->
+  <g transform="translate(60, 320)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="240" height="80" rx="16" fill="#ffffff" fill-opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="38" cy="40" r="20" fill="#ecfdf5" />
+    <!-- Truck Icon -->
+    <path d="M 28,34 H 40 V 44 H 28 Z M 40,37 H 45 L 48,41 V 44 H 40 Z" fill="#059669" />
+    <circle cx="32" cy="46" r="3" fill="#047857" />
+    <circle cx="44" cy="46" r="3" fill="#047857" />
+    <text x="70" y="33" fill="#0f172a" font-size="13" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700">Distribución Inmediata</text>
+    <text x="70" y="49" fill="#64748b" font-size="11" font-family="'Plus Jakarta Sans', Inter, sans-serif">Managua y Departamentos</text>
+    <text x="70" y="63" fill="#059669" font-size="10" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="600">&bull; Entregas seguras</text>
+  </g>
+
+  <!-- Floating Feature Card 3: Catálogo Activo -->
+  <g transform="translate(340, 330)" filter="url(#heroShadow)">
+    <rect x="0" y="0" width="210" height="70" rx="16" fill="#ffffff" fill-opacity="0.95" stroke="#e2e8f0" stroke-width="1.5" />
+    <circle cx="34" cy="35" r="18" fill="#f0f9ff" />
+    <!-- Cross Pill -->
+    <circle cx="34" cy="35" r="10" fill="#0a4d92" />
+    <path d="M 32,35 H 36 M 34,33 V 37" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+    <text x="64" y="30" fill="#0f172a" font-size="13" font-family="'Plus Jakarta Sans', Inter, sans-serif" font-weight="700">+10 Líneas Esenciales</text>
+    <text x="64" y="47" fill="#64748b" font-size="11" font-family="'Plus Jakarta Sans', Inter, sans-serif">Disponibilidad en Stock</text>
+  </g>
+</svg>

@@ -1,0 +1,136 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../views/**/*.blade.php';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+    
+    --color-brand-50: #f0f7ff;
+    --color-brand-100: #e0effe;
+    --color-brand-200: #bae0fd;
+    --color-brand-300: #7cc5fb;
+    --color-brand-400: #38a5f6;
+    --color-brand-500: #0a4d92;
+    --color-brand-600: #083e77;
+    --color-brand-700: #073260;
+    --color-brand-800: #062b50;
+    --color-brand-900: #051c33;
+    --color-brand-950: #031120;
+
+    --color-medical-teal: #0284c7;
+    --color-medical-light: #f8fafc;
+    --color-wa-green: #25d366;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Offset for sticky header navigation */
+section[id], header[id] {
+    scroll-margin-top: 5.5rem;
+}
+
+body {
+    background-color: #f8fafc;
+    color: #1e293b;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Modal transitions */
+[x-cloak] {
+    display: none !important;
+}
+
+/* ===================================================
+   SCROLL REVEAL ANIMATIONS (Bidireccional y ligero)
+   =================================================== */
+
+.reveal {
+    opacity: 0;
+    transition-property: opacity, transform;
+    transition-duration: 700ms;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+.reveal-up {
+    transform: translateY(24px);
+}
+
+.reveal-left {
+    transform: translateX(-24px);
+}
+
+.reveal-right {
+    transform: translateX(24px);
+}
+
+.reveal-scale {
+    transform: scale(0.96) translateY(12px);
+}
+
+/* Estado Visible */
+.reveal.is-visible,
+.reveal-up.is-visible,
+.reveal-left.is-visible,
+.reveal-right.is-visible,
+.reveal-scale.is-visible {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Delays escalonados ligeros */
+.delay-70 { transition-delay: 70ms; }
+.delay-140 { transition-delay: 140ms; }
+.delay-210 { transition-delay: 210ms; }
+.delay-280 { transition-delay: 280ms; }
+.delay-350 { transition-delay: 350ms; }
+
+/* Ajustes responsivos para móviles */
+@media (max-width: 640px) {
+    .reveal-up {
+        transform: translateY(16px);
+    }
+    .reveal-left {
+        transform: translateX(-16px);
+    }
+    .reveal-right {
+        transform: translateX(16px);
+    }
+    .reveal {
+        transition-duration: 550ms;
+    }
+}
+
+/* Accesibilidad: Respetar prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-up,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
